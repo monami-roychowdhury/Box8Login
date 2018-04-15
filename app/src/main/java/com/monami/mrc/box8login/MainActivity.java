@@ -16,5 +16,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
+
+//        DBHelper dbHelper = new DBHelper(this);
     }
 }
