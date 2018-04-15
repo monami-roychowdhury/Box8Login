@@ -19,9 +19,6 @@ import android.widget.Toast;
 import java.util.HashMap;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SignUpFragment extends Fragment {
     TextInputLayout nameLayout;
     TextInputLayout phoneLayout;
@@ -78,14 +75,10 @@ public class SignUpFragment extends Fragment {
                         Snackbar.make(signUpLayout, "Email/Mobile already exists",Snackbar.LENGTH_SHORT).show();
                     }else{
                         dbHelper.insertData(nameValue, phoneValue, emailValue, passwordValue);
-                        Toast.makeText(getActivity(), "Data inserted", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getActivity(), LoginSuccessActivity.class);
-                        getActivity().startActivity(intent);
-
+                        startActivity(intent);
 
                     }
-//                Toast.makeText(getActivity(), "Name:"+nameValue+" Phone:"+phoneValue+" Email:"+emailValue+
-//                        " Password:"+passwordValue,Toast.LENGTH_SHORT).show();
 
                 }else{
                     Snackbar.make(signUpLayout, "Invalid Email/Mobile",Snackbar.LENGTH_SHORT).show();

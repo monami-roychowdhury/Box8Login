@@ -69,11 +69,8 @@ public class LoginFragment extends Fragment {
                         do {
                             String username = cursor.getString(cursor.getColumnIndex("USERNAME"));
                             String phone = cursor.getString(cursor.getColumnIndex("PHONE"));
-                            Toast.makeText(getActivity(),
-                                    " SQL Data UserName " + username +
-                                            " Phone Number" + phone, Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getActivity(), LoginSuccessActivity.class);
-                            getActivity().startActivity(intent);
+                            startActivity(intent);
 
 
                         } while (cursor.moveToNext());

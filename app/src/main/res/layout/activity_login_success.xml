@@ -4,13 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginSuccessActivity">
+    tools:context=".LoginSuccessActivity"
+    android:gravity="center">
 
-    <!--<com.airbnb.lottie.LottieAnimationView-->
-        <!--android:id="@+id/success"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:lottie_rawRes="@raw/check_pop"-->
-        <!--app:lottie_autoPlay="true"/>-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/check_pop"
+        app:lottie_autoPlay="true"/>
+
+    <TextView
+        android:id="@+id/success_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/success"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Success!"/>
 
 </RelativeLayout>
